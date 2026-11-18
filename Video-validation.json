@@ -1,0 +1,10 @@
+{
+  "method": "FFmpeg full H.264 decode to null; not an interactive browser playback check",
+  "width": 1440,
+  "height": 900,
+  "duration": 18,
+  "fps": 15,
+  "decodedFrames": 270,
+  "error": null,
+  "sha256": "c21820c5a8597f0a47df225206b9f7c1511154f07341dbb98d95e06270dfdbb4"
+}

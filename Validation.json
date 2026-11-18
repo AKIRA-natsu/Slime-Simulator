@@ -1,0 +1,277 @@
+{
+  "version": "Slime v9 - Unity 6 HDRP optics",
+  "passed": true,
+  "checks": [
+    {
+      "name": "静置 30 秒逐点不漂移",
+      "passed": true,
+      "detail": "sleep=True; initial RMS=0.000000; max drift=0.000000 m"
+    },
+    {
+      "name": "静置时保留圆拱主体",
+      "passed": true,
+      "detail": "height=1.407; width=2.488; aspect=0.559"
+    },
+    {
+      "name": "底部适度外扩而非宽大裙边",
+      "passed": true,
+      "detail": "base=2.501; middle=2.338"
+    },
+    {
+      "name": "局部抓取可唤醒并拉伸",
+      "passed": true,
+      "detail": "rest=1.407; lifted=2.850"
+    },
+    {
+      "name": "提拉时底部下垂且全部粒子连通",
+      "passed": true,
+      "detail": "bottom=0.075; connected=512/512"
+    },
+    {
+      "name": "释放后重新稳定",
+      "passed": true,
+      "detail": "sleep=True; RMS=0.000000"
+    },
+    {
+      "name": "释放后恢复圆拱比例",
+      "passed": true,
+      "detail": "aspect delta=0.0141; bounds=(2.45, 1.35, 2.50)"
+    },
+    {
+      "name": "侧向提拉形成接地拖尾",
+      "passed": true,
+      "detail": "width=2.488->4.343; bottom=0.075; target error=0.004"
+    },
+    {
+      "name": "轻触产生局部凹陷",
+      "passed": true,
+      "detail": "height drop=0.169; speed=0.150"
+    },
+    {
+      "name": "轻触结束后自行静止",
+      "passed": true,
+      "detail": "sleep=True; speed=0.000000"
+    },
+    {
+      "name": "移动时局部滞后但不拉成扁长条",
+      "passed": true,
+      "detail": "upper/lower lag=0.217 m; bounds=(2.62, 1.38, 2.53)"
+    },
+    {
+      "name": "薄墙连续碰撞 8 m/s",
+      "passed": true,
+      "detail": "x=0.800000"
+    },
+    {
+      "name": "薄墙连续碰撞 30 m/s",
+      "passed": true,
+      "detail": "x=0.899700"
+    },
+    {
+      "name": "薄墙连续碰撞 60 m/s",
+      "passed": true,
+      "detail": "x=0.899400"
+    },
+    {
+      "name": "已贴住薄墙再推进不会跨面",
+      "passed": true,
+      "detail": "start=0.900000; end=0.900000"
+    },
+    {
+      "name": "持续顶实体墙不穿透",
+      "passed": true,
+      "detail": "clearance=0.000000; max x=1.8050"
+    },
+    {
+      "name": "整体高速撞墙不穿透",
+      "passed": true,
+      "detail": "max x=0.5417"
+    },
+    {
+      "name": "贴墙向上爬升",
+      "passed": true,
+      "detail": "center y=3.896; clearance=0.000000"
+    },
+    {
+      "name": "取消攀附后受重力下落",
+      "passed": true,
+      "detail": "before=3.896; after=0.514"
+    },
+    {
+      "name": "窄门挤压通行",
+      "passed": true,
+      "detail": "crossed=512/512; clearance=0.000000; center=(4.00, 0.76, 0.00)"
+    },
+    {
+      "name": "门通行轨迹只经过开口",
+      "passed": true,
+      "detail": "legal=True; plane crossings=512"
+    },
+    {
+      "name": "门通行后融合并稳定",
+      "passed": true,
+      "detail": "connected=512; sleep=True; speed=0.000000"
+    },
+    {
+      "name": "高窗开口通行",
+      "passed": true,
+      "detail": "crossed=512/512; clearance=0.000000; center=(4.00, 0.88, 0.00)"
+    },
+    {
+      "name": "窗通行轨迹只经过开口",
+      "passed": true,
+      "detail": "legal=True; plane crossings=512"
+    },
+    {
+      "name": "窗通行后融合并稳定",
+      "passed": true,
+      "detail": "connected=512; sleep=True; speed=0.000000"
+    },
+    {
+      "name": "粒子数量守恒、状态有限",
+      "passed": true,
+      "detail": "count=512"
+    },
+    {
+      "name": "W 按相机朝向前进",
+      "passed": true,
+      "detail": "yaw90 forward=(1.00, 0.00, 0.00)"
+    },
+    {
+      "name": "斜向输入不会额外加速",
+      "passed": true,
+      "detail": "diagonal magnitude=1"
+    },
+    {
+      "name": "手动步行驱动真实液体",
+      "passed": true,
+      "detail": "center=(2.75, 0.55, -0.01); clearance=0.00000"
+    },
+    {
+      "name": "环视镜头不会旋转身体朝向",
+      "passed": true,
+      "detail": "before=90; after=90"
+    },
+    {
+      "name": "松开移动键后收拢并静止",
+      "passed": true,
+      "detail": "sleep=True; rms=0.00000"
+    },
+    {
+      "name": "Shift 加速产生更快位移",
+      "passed": true,
+      "detail": "walk=2.745; sprint=4.713"
+    },
+    {
+      "name": "奔跑仍保留圆润体积与连通性",
+      "passed": true,
+      "detail": "bounds=(2.49, 1.37, 2.48); aspect=0.550"
+    },
+    {
+      "name": "起跳离地且空中不能再次起跳",
+      "passed": true,
+      "detail": "height gain=0.943; jumps=1"
+    },
+    {
+      "name": "落地后恢复静止体态",
+      "passed": true,
+      "detail": "sleep=True; grounded=True; bounds=(2.59, 1.36, 2.56)"
+    },
+    {
+      "name": "训练场远端仍可移动和聚合",
+      "passed": true,
+      "detail": "center=(12.75, 0.55, -0.01)"
+    },
+    {
+      "name": "玩家持续跑向实体墙仍被阻挡",
+      "passed": true,
+      "detail": "max x=1.8050; clearance=0.00000"
+    },
+    {
+      "name": "仅方向输入识别并挤过窄门",
+      "passed": true,
+      "detail": "crossed=512; clearance=0.00000"
+    },
+    {
+      "name": "仅方向输入识别并通过高窗",
+      "passed": true,
+      "detail": "crossed=512; clearance=0.00000"
+    },
+    {
+      "name": "仅方向输入识别墙面并爬升",
+      "passed": true,
+      "detail": "height=1.802"
+    },
+    {
+      "name": "松开方向后取消攀附并下落",
+      "passed": true,
+      "detail": "before=1.802; after=0.535"
+    },
+    {
+      "name": "重复重置复用稳定状态且正确平移",
+      "passed": true,
+      "detail": "maximum pose error=0.000000"
+    },
+    {
+      "name": "物理参数改变会使重置缓存失效",
+      "passed": true,
+      "detail": "height=1.407->1.163"
+    },
+    {
+      "name": "重置缓存不能覆盖新加入的实体",
+      "passed": true,
+      "detail": "clearance=0.00000; max x=1.015"
+    },
+    {
+      "name": "开阔地不误触发自动攀附和挤压",
+      "passed": true,
+      "detail": "triggered=False; height=0.550"
+    },
+    {
+      "name": "沿墙平行行走不会被吸上墙",
+      "passed": true,
+      "detail": "climbed=False; center=(0.73, 0.56, -0.03)"
+    },
+    {
+      "name": "宽通道保持正常走动而不强行变形",
+      "passed": true,
+      "detail": "triggered=False; rear=4.427"
+    },
+    {
+      "name": "没有过梁的窄通道也能识别",
+      "passed": true,
+      "detail": "opening=True; lift=False"
+    },
+    {
+      "name": "平移并转向的无名称高窗仍能识别通行",
+      "passed": true,
+      "detail": "climb=True; squeeze=True; rear=6.090; clearance=0.00000"
+    },
+    {
+      "name": "从开口背面接近也能自动挤过",
+      "passed": true,
+      "detail": "rear=-4.168; clearance=0.00000"
+    },
+    {
+      "name": "松开输入立即取消识别动作",
+      "passed": true,
+      "detail": "climb=False; squeeze=False"
+    },
+    {
+      "name": "转向离墙立即取消攀附",
+      "passed": true,
+      "detail": "climb=False"
+    },
+    {
+      "name": "抓取优先于自动环境动作",
+      "passed": true,
+      "detail": "climb=False; squeeze=False; drive=(0.00, 0.00, 0.00)"
+    },
+    {
+      "name": "过小的缝隙不判为可通过开口",
+      "passed": true,
+      "detail": "squeeze=False; front=1.675"
+    }
+  ],
+  "simulationSourceSha256": "FC73CE384C84CD4EB6E754E1AD2DCA4ED8642C4AD5F2CD26247A89F1DE469547"
+}

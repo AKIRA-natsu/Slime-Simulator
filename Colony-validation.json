@@ -1,0 +1,91 @@
+{
+    "version": "Slime v9 - Unity 6 colony",
+    "passed": true,
+    "checks": [
+        {
+            "name": "连续六次分裂，不限制两只分身",
+            "passed": true,
+            "detail": "bodies=7; mass=512"
+        },
+        {
+            "name": "被实体切断的两团自动拥有独立控制器",
+            "passed": true,
+            "detail": "bodies=2; mass=512"
+        },
+        {
+            "name": "横栏杆通过，断团允许自动独立",
+            "passed": true,
+            "detail": "crossed=512; min clearance=0.000000; bodies=1"
+        },
+        {
+            "name": "竖栏杆通过，断团允许自动独立",
+            "passed": true,
+            "detail": "crossed=502; min clearance=0.000000; bodies=2"
+        },
+        {
+            "name": "真实竖栏杆切断后自主跟随并融合",
+            "passed": true,
+            "detail": "fractures=1; bodies=1; mass=512"
+        },
+        {
+            "name": "被墙隔开的前方液体不会被后方团块拉住",
+            "passed": true,
+            "detail": "free island travel=18.098; clearance=0.000000"
+        },
+        {
+            "name": "主动分裂保持粒子质量和瞬时质心",
+            "passed": true,
+            "detail": "particles=512; bodies=2; center shift=0.000000"
+        },
+        {
+            "name": "分裂后主角移动与独立跟随",
+            "passed": true,
+            "detail": "leader travel=11.04; follower max gap=2.42; clearance=0.000000"
+        },
+        {
+            "name": "停步自动集合并接触融合",
+            "passed": true,
+            "detail": "bodies=1; merged=1; particles=512"
+        },
+        {
+            "name": "主动分裂保持粒子质量和瞬时质心（栏杆）",
+            "passed": true,
+            "detail": "particles=512; bodies=2; center shift=0.000000"
+        },
+        {
+            "name": "分裂后主角移动与独立跟随（穿栏杆）",
+            "passed": true,
+            "detail": "leader travel=9.74; follower max gap=2.33; clearance=0.000000"
+        },
+        {
+            "name": "停步自动集合并接触融合（栏杆后）",
+            "passed": true,
+            "detail": "bodies=1; merged=1; particles=512"
+        },
+        {
+            "name": "转弯后可在持续移动中召回融合，连续分裂不复制质量",
+            "passed": true,
+            "detail": "followers=0; particles=512; moving distance=9.77"
+        },
+        {
+            "name": "可连续细分为三十二个个体，质量不增不减",
+            "passed": true,
+            "detail": "bodies=32; mass=512"
+        },
+        {
+            "name": "街区纵向可跨越旧地图边界",
+            "passed": true,
+            "detail": "center=(-21.05, 0.59, 15.65); clearance=0.000000"
+        },
+        {
+            "name": "街区横向可跨越旧地图边界",
+            "passed": true,
+            "detail": "center=(30.60, 0.57, -0.01); clearance=0.000000"
+        },
+        {
+            "name": "屋顶跳跃不再被旧的七米高度截断",
+            "passed": true,
+            "detail": "jumps=1; apex=7.769; clearance=0.000000"
+        }
+    ]
+}

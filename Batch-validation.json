@@ -1,0 +1,372 @@
+{
+  "version": "Slime v9 - Unity 6 HDRP optics",
+  "passed": true,
+  "comparison": [
+    {
+      "view": "course_default",
+      "beforeBatches": 28.0,
+      "afterBatches": 54.0,
+      "drawCalls": 62.0,
+      "setPass": 38.0
+    },
+    {
+      "view": "course_reverse",
+      "beforeBatches": 24.0,
+      "afterBatches": 45.0,
+      "drawCalls": 53.0,
+      "setPass": 32.0
+    },
+    {
+      "view": "rest_front",
+      "beforeBatches": 22.0,
+      "afterBatches": 40.0,
+      "drawCalls": 48.0,
+      "setPass": 32.0
+    },
+    {
+      "view": "reflection_refresh",
+      "beforeBatches": 146.0,
+      "afterBatches": 239.0,
+      "drawCalls": 248.0,
+      "setPass": 179.0
+    },
+    {
+      "view": "fill_disabled_diagnostic",
+      "beforeBatches": 28.0,
+      "afterBatches": 54.0,
+      "drawCalls": 62.0,
+      "setPass": 38.0
+    }
+  ],
+  "before": {
+    "method": "Release Player, 1440x900 AA4. One explicit URP SingleCameraRequest per frame; GUI suppressed. ProfilerRecorder reads the completed prior frame after yield. 15 warmup + 45 samples per view. Includes depth, shadows and post-processing; reflection_refresh also renders six cubemap faces. Fill-disabled view is diagnostic only.",
+    "utc": "2026-11-11T07:25:34.2481443Z",
+    "device": "NVIDIA GeForce RTX 3050 OEM",
+    "countersValid": true,
+    "streetRenderers": 18,
+    "streetColliders": 39,
+    "stages": [
+      {
+        "name": "course_default",
+        "batches": {
+          "mean": 28.0,
+          "median": 28.0,
+          "p95": 28.0
+        },
+        "drawCalls": {
+          "mean": 30.0,
+          "median": 30.0,
+          "p95": 30.0
+        },
+        "setPass": {
+          "mean": 17.0,
+          "median": 17.0,
+          "p95": 17.0
+        },
+        "triangles": {
+          "mean": 15686.0,
+          "median": 15686.0,
+          "p95": 15686.0
+        },
+        "renderAndFenceMs": {
+          "mean": 2.9930377777777784,
+          "median": 2.9799,
+          "p95": 3.2488
+        }
+      },
+      {
+        "name": "course_reverse",
+        "batches": {
+          "mean": 24.0,
+          "median": 24.0,
+          "p95": 24.0
+        },
+        "drawCalls": {
+          "mean": 26.0,
+          "median": 26.0,
+          "p95": 26.0
+        },
+        "setPass": {
+          "mean": 16.0,
+          "median": 16.0,
+          "p95": 16.0
+        },
+        "triangles": {
+          "mean": 15412.0,
+          "median": 15412.0,
+          "p95": 15412.0
+        },
+        "renderAndFenceMs": {
+          "mean": 6.4597000000000016,
+          "median": 6.37,
+          "p95": 7.0046
+        }
+      },
+      {
+        "name": "rest_front",
+        "batches": {
+          "mean": 22.0,
+          "median": 22.0,
+          "p95": 22.0
+        },
+        "drawCalls": {
+          "mean": 24.0,
+          "median": 24.0,
+          "p95": 24.0
+        },
+        "setPass": {
+          "mean": 16.0,
+          "median": 16.0,
+          "p95": 16.0
+        },
+        "triangles": {
+          "mean": 14512.0,
+          "median": 14512.0,
+          "p95": 14512.0
+        },
+        "renderAndFenceMs": {
+          "mean": 5.045335555555554,
+          "median": 5.0109,
+          "p95": 5.210500000000001
+        }
+      },
+      {
+        "name": "reflection_refresh",
+        "batches": {
+          "mean": 146.0,
+          "median": 146.0,
+          "p95": 146.0
+        },
+        "drawCalls": {
+          "mean": 188.0,
+          "median": 188.0,
+          "p95": 188.0
+        },
+        "setPass": {
+          "mean": 94.0,
+          "median": 94.0,
+          "p95": 94.0
+        },
+        "triangles": {
+          "mean": 78430.0,
+          "median": 78430.0,
+          "p95": 78430.0
+        },
+        "renderAndFenceMs": {
+          "mean": 8.332764444444448,
+          "median": 8.315900000000001,
+          "p95": 8.661800000000001
+        }
+      },
+      {
+        "name": "fill_disabled_diagnostic",
+        "batches": {
+          "mean": 28.0,
+          "median": 28.0,
+          "p95": 28.0
+        },
+        "drawCalls": {
+          "mean": 30.0,
+          "median": 30.0,
+          "p95": 30.0
+        },
+        "setPass": {
+          "mean": 17.0,
+          "median": 17.0,
+          "p95": 17.0
+        },
+        "triangles": {
+          "mean": 15686.0,
+          "median": 15686.0,
+          "p95": 15686.0
+        },
+        "renderAndFenceMs": {
+          "mean": 5.026391111111112,
+          "median": 5.2113000000000005,
+          "p95": 5.3741
+        }
+      }
+    ]
+  },
+  "after": {
+    "method": "Release Player, 1440x900 SMAA. One explicit HDRP StandardRequest per frame; GUI suppressed. ProfilerRecorder reads the completed prior frame after yield. 15 warmup + 45 samples per view. Includes depth, shadows and post-processing; reflection_refresh intentionally renders six cubemap faces together, while gameplay refreshes one face per presentation frame. Fill-disabled view is diagnostic only.",
+    "utc": "2026-11-18T07:09:40.2870251Z",
+    "device": "NVIDIA GeForce RTX 3050 OEM",
+    "countersValid": true,
+    "streetRenderers": 19,
+    "streetColliders": 39,
+    "stages": [
+      {
+        "name": "course_default",
+        "batches": {
+          "mean": 54.0,
+          "median": 54.0,
+          "p95": 54.0
+        },
+        "drawCalls": {
+          "mean": 62.0,
+          "median": 62.0,
+          "p95": 62.0
+        },
+        "setPass": {
+          "mean": 38.0,
+          "median": 38.0,
+          "p95": 38.0
+        },
+        "triangles": {
+          "mean": 23995.0,
+          "median": 23995.0,
+          "p95": 23995.0
+        },
+        "renderAndFenceMs": {
+          "mean": 6.855033333333333,
+          "median": 6.6332,
+          "p95": 7.831300000000001
+        }
+      },
+      {
+        "name": "course_reverse",
+        "batches": {
+          "mean": 45.0,
+          "median": 45.0,
+          "p95": 45.0
+        },
+        "drawCalls": {
+          "mean": 53.0,
+          "median": 53.0,
+          "p95": 53.0
+        },
+        "setPass": {
+          "mean": 32.0,
+          "median": 32.0,
+          "p95": 32.0
+        },
+        "triangles": {
+          "mean": 22953.0,
+          "median": 22953.0,
+          "p95": 22953.0
+        },
+        "renderAndFenceMs": {
+          "mean": 7.939351111111112,
+          "median": 7.8241000000000005,
+          "p95": 8.824
+        }
+      },
+      {
+        "name": "rest_front",
+        "batches": {
+          "mean": 40.0,
+          "median": 40.0,
+          "p95": 40.0
+        },
+        "drawCalls": {
+          "mean": 48.0,
+          "median": 48.0,
+          "p95": 48.0
+        },
+        "setPass": {
+          "mean": 32.0,
+          "median": 32.0,
+          "p95": 32.0
+        },
+        "triangles": {
+          "mean": 21453.0,
+          "median": 21453.0,
+          "p95": 21453.0
+        },
+        "renderAndFenceMs": {
+          "mean": 7.728302222222223,
+          "median": 7.6021,
+          "p95": 8.248700000000001
+        }
+      },
+      {
+        "name": "reflection_refresh",
+        "batches": {
+          "mean": 239.0,
+          "median": 239.0,
+          "p95": 239.0
+        },
+        "drawCalls": {
+          "mean": 248.0,
+          "median": 248.0,
+          "p95": 248.0
+        },
+        "setPass": {
+          "mean": 179.0,
+          "median": 179.0,
+          "p95": 179.0
+        },
+        "triangles": {
+          "mean": 40659.0,
+          "median": 40659.0,
+          "p95": 40659.0
+        },
+        "renderAndFenceMs": {
+          "mean": 12.610015555555558,
+          "median": 12.5622,
+          "p95": 13.330900000000002
+        }
+      },
+      {
+        "name": "fill_disabled_diagnostic",
+        "batches": {
+          "mean": 54.0,
+          "median": 54.0,
+          "p95": 54.0
+        },
+        "drawCalls": {
+          "mean": 62.0,
+          "median": 62.0,
+          "p95": 62.0
+        },
+        "setPass": {
+          "mean": 38.0,
+          "median": 38.0,
+          "p95": 38.0
+        },
+        "triangles": {
+          "mean": 23995.0,
+          "median": 23995.0,
+          "p95": 23995.0
+        },
+        "renderAndFenceMs": {
+          "mean": 6.635235555555555,
+          "median": 6.5229,
+          "p95": 7.192200000000001
+        }
+      }
+    ]
+  },
+  "sourceSha256": {
+    "Editor\\SlimeHDRPProject.cs": "069ABF788322FAEC816F08EE72E9F6EC082A029355927FFD9903DFFD7BC9A439",
+    "Editor\\SlimeProject.cs": "DAE0D6933D943D7474C8BA54F53B32A21561C4150C8061870342BB9CEF42BB92",
+    "Resources\\SlimeVolume.compute": "29EFADBE73D63CC0BF66442527F982B5E9E7AA75003BAF1DB7F1667283B040BD",
+    "Scripts\\Arena.cs": "37518EE9E3F5127A0DD218C49375ADFDB1E457A17678CEC6AB5B54C3B2E19C41",
+    "Scripts\\SlimeBatchAudit.cs": "4F9107E6901B1C3ED78BB7E1E3DC795AF73E3A55D4825118C29BC8EE4F79E08A",
+    "Scripts\\SlimeBenchmark.cs": "765DBADD381C475AFB27F91583DE66A6A4669D4C5BF5056F678B55134D0F2D28",
+    "Scripts\\SlimeCameraAudit.cs": "B85E197EBCCBC05664FBD704D9CAB4AA09B85CF739671F8E0AE19FA7218C4636",
+    "Scripts\\SlimeChecks.cs": "8DDE9D39D87F7F24CEF3C4E5E2B4B0F339952E517B02DA537313CC2A28848312",
+    "Scripts\\SlimeColony.cs": "C0CB870FFC11F5A9EB37C228712DC99AE8AF46A00B3296A4A1D5E038DCAD6010",
+    "Scripts\\SlimeColonyCapture.cs": "E029221EEB445EA1102B2890F799DCFC87F91A1320C3AA990F716F91085860A0",
+    "Scripts\\SlimeColonyChecks.cs": "6E4358ECF7E7BF141C2CA52705D020F4D0EC037A02B72F79FF6013DED675A87E",
+    "Scripts\\SlimeContactPass.cs": "2F51DB6CADE2054158F829ED368A43A51DA7C1780418C4D6D2DB03CB8EB78B36",
+    "Scripts\\SlimeFollowCamera.cs": "FA22F96F74EF1A6E431452AEC3816C043DD16A00164E02EB19477D52D0627927",
+    "Scripts\\SlimeLabController.cs": "91E46885093ED87BE08C98C925F2E341F15FCF538607509F4DC762EF77710B0A",
+    "Scripts\\SlimeMeshBatches.cs": "9F860D243F1D053147B37FA7EDFF8AAF67C86C9194C5755D5F322370EA735F96",
+    "Scripts\\SlimeMotor.cs": "917E269D4B9ED10DA76082F373BCE625C8CCD07D675C2872B53CE414349B661E",
+    "Scripts\\SlimePerception.cs": "0A339B1B092BFFD949841CEEDFADA731C6D32C49790627EDC4F2368DD5EB9A50",
+    "Scripts\\SlimeRendering.cs": "03344FD37E629D63A125EEB6689F2D2540AC909F023FCA069B3B4F46EA5EF95E",
+    "Scripts\\SlimeSimulation.cs": "FC73CE384C84CD4EB6E754E1AD2DCA4ED8642C4AD5F2CD26247A89F1DE469547",
+    "Scripts\\SlimeSpray.cs": "E137B50626E6797BC9D06A779E172E4153114D7C2E18C57F5C7686621D7FDC54",
+    "Scripts\\SlimeStreet.cs": "16A3A3F4C7EB388FA7E00F57096970258D76CD5A21ED8645F7FFE1E9F728BCD6",
+    "Scripts\\SlimeSurface.cs": "57515246CB7C240ED02309243F3DCE715252802B45477D21B5A18A23678087E5",
+    "Scripts\\SlimeTpsObstacles.cs": "49A51066B7BBA913D0C3416B193035EED84E106C4C0DB735F4CF8306781040A5",
+    "Shaders\\Droplet.shader": "3ED6A284F1661684FB41F4C43BCC1414E28255545EB2E81A1417037177945102",
+    "Shaders\\SlimeGlass.shader": "9A598FDE78F7DEFA767B51238F1AE2097AB5B0DF41E0867F380EA8BECD1AE90E",
+    "Shaders\\SlimeHDRP.hlsl": "50E8F01B76651146B413C8903ED1F1BDA4F8F2924595DCC02ABB9CA4D60FB224",
+    "Shaders\\WetContact.shader": "FDE5C0F925F06C96FAAE4AF24EE2A8FEDEA1F3AB7C3314585D7B90E1570A17E0",
+    "Shaders\\WorldLabel.shader": "F3AFB5796414EA0C56A6F9842F5646C90DB60A336EF6FD4DCEE354F603EF45EA"
+  },
+  "scope": "Unity 6 HDRP compared with the Unity 2022 URP v8 baseline; different render pipelines, not an equal-quality performance comparison. Regular views must stay below 100 batches. Complete six-face reflection capture is listed separately. Native counters exclude GUI; geometry merging asserts collider preservation."
+}

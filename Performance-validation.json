@@ -1,0 +1,334 @@
+{
+  "version": "Slime v9 - Unity 6 HDRP optics",
+  "passed": true,
+  "device": "NVIDIA GeForce RTX 3050 OEM",
+  "timings": [
+    {
+      "scenario": "rest",
+      "meanMs": 7.713740000000002,
+      "p95Ms": 8.7508,
+      "samples": 90
+    },
+    {
+      "scenario": "walk",
+      "meanMs": 18.875663333333335,
+      "p95Ms": 23.3227,
+      "samples": 90
+    },
+    {
+      "scenario": "run",
+      "meanMs": 19.066926666666674,
+      "p95Ms": 24.592000000000002,
+      "samples": 90
+    },
+    {
+      "scenario": "sixteen_bodies",
+      "meanMs": 18.835365555555555,
+      "p95Ms": 21.782600000000002,
+      "samples": 90
+    }
+  ],
+  "before": {
+    "method": "1440x900 AA4, deterministic 60 Hz replay / 90 Hz simulation; 30 warmup + 90 samples per stage. Render includes a synchronous one-pixel readback GPU fence. CPU submission and synchronized frame cost, not gameplay FPS or GPU timestamp queries.",
+    "device": "NVIDIA GeForce RTX 3050 OEM",
+    "utc": "2026-11-11T07:25:41.2219374Z",
+    "stages": [
+      {
+        "name": "rest",
+        "samples": 90,
+        "resetMs": 7.3932,
+        "physicsCpu": {
+          "mean": 0.17367000000000005,
+          "median": 0.19920000000000002,
+          "p95": 0.2903
+        },
+        "volumeSubmitCpu": {
+          "mean": 0.00047333333333333364,
+          "median": 0.0005,
+          "p95": 0.0007
+        },
+        "presentationCpu": {
+          "mean": 0.1809044444444445,
+          "median": 0.17250000000000001,
+          "p95": 0.2177
+        },
+        "renderAndGpuFence": {
+          "mean": 4.426273333333334,
+          "median": 4.6825,
+          "p95": 5.919300000000001
+        },
+        "total": {
+          "mean": 4.781321111111112,
+          "median": 4.986800000000001,
+          "p95": 6.3139
+        },
+        "bounds": {
+          "x": 2.487977981567383,
+          "y": 1.40382981300354,
+          "z": 2.515317440032959
+        },
+        "speed": 0.0
+      },
+      {
+        "name": "walk",
+        "samples": 90,
+        "resetMs": 10.5119,
+        "physicsCpu": {
+          "mean": 7.437553333333333,
+          "median": 8.9981,
+          "p95": 11.6562
+        },
+        "volumeSubmitCpu": {
+          "mean": 0.6579366666666667,
+          "median": 0.6435000000000001,
+          "p95": 0.6980000000000001
+        },
+        "presentationCpu": {
+          "mean": 0.21677777777777776,
+          "median": 0.1819,
+          "p95": 0.2093
+        },
+        "renderAndGpuFence": {
+          "mean": 6.608291111111109,
+          "median": 6.2198,
+          "p95": 10.4239
+        },
+        "total": {
+          "mean": 14.92055888888889,
+          "median": 15.067100000000002,
+          "p95": 20.4651
+        },
+        "bounds": {
+          "x": 2.5165462493896484,
+          "y": 1.3628199100494385,
+          "z": 2.4957919120788574
+        },
+        "speed": 1.9639954566955566
+      },
+      {
+        "name": "run",
+        "samples": 90,
+        "resetMs": 10.38,
+        "physicsCpu": {
+          "mean": 6.981875555555554,
+          "median": 8.3488,
+          "p95": 10.866
+        },
+        "volumeSubmitCpu": {
+          "mean": 0.6176333333333333,
+          "median": 0.6134000000000001,
+          "p95": 0.6735
+        },
+        "presentationCpu": {
+          "mean": 0.2031,
+          "median": 0.171,
+          "p95": 0.1968
+        },
+        "renderAndGpuFence": {
+          "mean": 5.690103333333334,
+          "median": 5.6642,
+          "p95": 7.643000000000001
+        },
+        "total": {
+          "mean": 13.492712222222227,
+          "median": 14.5831,
+          "p95": 17.2087
+        },
+        "bounds": {
+          "x": 2.507108688354492,
+          "y": 1.3707412481307983,
+          "z": 2.4816393852233887
+        },
+        "speed": 3.3651809692382812
+      },
+      {
+        "name": "sixteen_bodies",
+        "samples": 90,
+        "resetMs": 10.533800000000001,
+        "physicsCpu": {
+          "mean": 4.79695888888889,
+          "median": 6.0288,
+          "p95": 6.613700000000001
+        },
+        "volumeSubmitCpu": {
+          "mean": 1.4985688888888888,
+          "median": 1.3522,
+          "p95": 1.8305
+        },
+        "presentationCpu": {
+          "mean": 0.18453777777777777,
+          "median": 0.1819,
+          "p95": 0.2016
+        },
+        "renderAndGpuFence": {
+          "mean": 6.895463333333336,
+          "median": 6.9411000000000005,
+          "p95": 7.5156
+        },
+        "total": {
+          "mean": 13.375528888888885,
+          "median": 13.790400000000002,
+          "p95": 15.3397
+        },
+        "bounds": {
+          "x": 0.9558124542236328,
+          "y": 0.11298638582229614,
+          "z": 0.8320476412773132
+        },
+        "speed": 1.5573822259902954
+      }
+    ]
+  },
+  "after": {
+    "method": "1440x900 SMAA, deterministic 60 Hz replay / 90 Hz simulation; 30 warmup + 90 samples per stage. Render includes a synchronous one-pixel readback GPU fence. CPU submission and synchronized frame cost, not gameplay FPS or GPU timestamp queries.",
+    "device": "NVIDIA GeForce RTX 3050 OEM",
+    "utc": "2026-11-18T07:09:50.3265332Z",
+    "stages": [
+      {
+        "name": "rest",
+        "samples": 90,
+        "resetMs": 10.311,
+        "physicsCpu": {
+          "mean": 0.1600333333333333,
+          "median": 0.197,
+          "p95": 0.21960000000000002
+        },
+        "volumeSubmitCpu": {
+          "mean": 0.0005988888888888894,
+          "median": 0.0006000000000000001,
+          "p95": 0.0009000000000000001
+        },
+        "presentationCpu": {
+          "mean": 0.17121555555555557,
+          "median": 0.169,
+          "p95": 0.18860000000000002
+        },
+        "renderAndGpuFence": {
+          "mean": 7.381892222222219,
+          "median": 7.1965,
+          "p95": 8.4689
+        },
+        "total": {
+          "mean": 7.713740000000002,
+          "median": 7.5562,
+          "p95": 8.7508
+        },
+        "bounds": {
+          "x": 2.487977981567383,
+          "y": 1.40382981300354,
+          "z": 2.515317440032959
+        },
+        "speed": 0.0
+      },
+      {
+        "name": "walk",
+        "samples": 90,
+        "resetMs": 15.7071,
+        "physicsCpu": {
+          "mean": 8.829356666666667,
+          "median": 10.871,
+          "p95": 13.2537
+        },
+        "volumeSubmitCpu": {
+          "mean": 0.847991111111111,
+          "median": 0.8335,
+          "p95": 0.8957
+        },
+        "presentationCpu": {
+          "mean": 0.28942555555555555,
+          "median": 0.187,
+          "p95": 1.5345
+        },
+        "renderAndGpuFence": {
+          "mean": 8.908890000000001,
+          "median": 8.6617,
+          "p95": 10.036800000000001
+        },
+        "total": {
+          "mean": 18.875663333333335,
+          "median": 20.2895,
+          "p95": 23.3227
+        },
+        "bounds": {
+          "x": 2.5165462493896484,
+          "y": 1.3628199100494385,
+          "z": 2.4957919120788574
+        },
+        "speed": 1.9639954566955566
+      },
+      {
+        "name": "run",
+        "samples": 90,
+        "resetMs": 16.066300000000002,
+        "physicsCpu": {
+          "mean": 8.738481111111108,
+          "median": 10.3103,
+          "p95": 13.122300000000001
+        },
+        "volumeSubmitCpu": {
+          "mean": 0.8402477777777779,
+          "median": 0.8339000000000001,
+          "p95": 0.9171
+        },
+        "presentationCpu": {
+          "mean": 0.30152555555555555,
+          "median": 0.1859,
+          "p95": 1.508
+        },
+        "renderAndGpuFence": {
+          "mean": 9.186672222222224,
+          "median": 9.1057,
+          "p95": 10.2256
+        },
+        "total": {
+          "mean": 19.066926666666674,
+          "median": 20.0656,
+          "p95": 24.592000000000002
+        },
+        "bounds": {
+          "x": 2.507108688354492,
+          "y": 1.3707412481307983,
+          "z": 2.4816393852233887
+        },
+        "speed": 3.3651809692382812
+      },
+      {
+        "name": "sixteen_bodies",
+        "samples": 90,
+        "resetMs": 15.719100000000001,
+        "physicsCpu": {
+          "mean": 5.850103333333332,
+          "median": 7.317900000000001,
+          "p95": 8.450000000000001
+        },
+        "volumeSubmitCpu": {
+          "mean": 1.9751277777777776,
+          "median": 1.8268,
+          "p95": 2.5501
+        },
+        "presentationCpu": {
+          "mean": 0.21153444444444436,
+          "median": 0.20170000000000002,
+          "p95": 0.2441
+        },
+        "renderAndGpuFence": {
+          "mean": 10.798600000000004,
+          "median": 10.7528,
+          "p95": 11.7542
+        },
+        "total": {
+          "mean": 18.835365555555555,
+          "median": 19.363100000000003,
+          "p95": 21.782600000000002
+        },
+        "bounds": {
+          "x": 0.9558124542236328,
+          "y": 0.11298638582229614,
+          "z": 0.8320476412773132
+        },
+        "speed": 1.5573822259902954
+      }
+    ]
+  },
+  "scope": "1440x900 SMAA, 30 warmup and 90 samples per stage. Includes GPU synchronization; not real-time FPS. v8 is contextual only because the pipeline, lighting and materials changed. Mean budgets: 22ms single-body, 33.333ms sixteen-body; P95: 33.333/50ms."
+}

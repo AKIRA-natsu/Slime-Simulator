@@ -1,0 +1,301 @@
+{
+  "version": "Slime v9 - Unity 6 HDRP optics",
+  "createdAt": "2026-11-18T07:09:31.5728875Z",
+  "reference": "https://www.bilibili.com/video/BV16w411h7XQ/",
+  "gpu": "NVIDIA GeForce RTX 3050 OEM / DirectX 11",
+  "captureResolution": "1440 x 900",
+  "captureMode": "Native HDRP StandardRequest, hidden window",
+  "restImageComparison": {
+    "passed": true,
+    "secondsApart": 3,
+    "encodedPngByteIdentical": false,
+    "pixelDifference": {
+      "MaximumChannelDifference": 40,
+      "MeanChannelDifference": 0.0006813271604938271,
+      "ChangedPixels": 709,
+      "TotalPixels": 1296000,
+      "ChangedBounds": [
+        9,
+        239,
+        1284,
+        409
+      ]
+    },
+    "fluidRegions": [
+      [
+        300,
+        400,
+        600,
+        450
+      ]
+    ],
+    "fluidPixelDifferences": [
+      {
+        "MaximumChannelDifference": 0,
+        "MeanChannelDifference": 0,
+        "ChangedPixels": 0,
+        "TotalPixels": 270000,
+        "ChangedBounds": [
+          1440,
+          900,
+          -1,
+          -1
+        ]
+      }
+    ],
+    "allowedFluidChannelDifference": 1,
+    "cameraAndSimulationStateIdentical": true,
+    "poses": [
+      "position=(4.71607542, 2.56651688, -0.305843234); rotation=(0.0823695585, -0.612288833, 0.0643541515, 0.783693969); fov=65; revision=177; environment=(-0.00888958015, 1.04247403, -0.00379916327)",
+      "position=(4.71607542, 2.56651688, -0.305843234); rotation=(0.0823695585, -0.612288833, 0.0643541515, 0.783693969); fov=65; revision=177; environment=(-0.00888958015, 1.04247403, -0.00379916327)"
+    ],
+    "firstSha256": "120E22EFE25138BCD57A076A106D353E053E3AFFB413296468A75002015A002E",
+    "secondSha256": "A18646EF8C674B58176AAB7B19918B113219CF60A242126ABEEE60300DA67128",
+    "note": "The visually inspected fixed region contains the complete slime plus margin in the TPS rest view. Exact camera pose, lens, simulation revision and environment position must match. Background raster edges can vary; full-frame mean difference must stay below 0.005/255 and changed pixels below 0.1% (HDRP background raster/lighting edge tolerance); the liquid itself remains within 1/255. This does not claim byte-identical full-frame rendering."
+  },
+  "physicsReport": "Unity-validation.json",
+  "captures": [
+    {
+      "file": "Unity-Slime-rest.png",
+      "center": "(-0.01, 0.54, 0.00)",
+      "sleeping": true,
+      "rmsSpeed": 0.0,
+      "physicsCpuMs": 0.01,
+      "volumeSubmitCpuMs": 0.74,
+      "renderWithReadbackMs": 26.73,
+      "particleClearance": 0.0
+    },
+    {
+      "file": "Unity-Slime-rest-later.png",
+      "center": "(-0.01, 0.54, 0.00)",
+      "sleeping": true,
+      "rmsSpeed": 0.0,
+      "physicsCpuMs": 0.03,
+      "volumeSubmitCpuMs": 0.74,
+      "renderWithReadbackMs": 38.32,
+      "particleClearance": 0.0
+    },
+    {
+      "file": "Unity-Slime-lift.png",
+      "center": "(0.13, 0.86, -0.02)",
+      "sleeping": false,
+      "rmsSpeed": 0.43464,
+      "physicsCpuMs": 71.93,
+      "volumeSubmitCpuMs": 0.53,
+      "renderWithReadbackMs": 39.37,
+      "particleClearance": 0.0
+    },
+    {
+      "file": "Unity-Slime-release.png",
+      "center": "(0.12, 0.54, -0.01)",
+      "sleeping": true,
+      "rmsSpeed": 0.0,
+      "physicsCpuMs": 0.03,
+      "volumeSubmitCpuMs": 0.46,
+      "renderWithReadbackMs": 36.97,
+      "particleClearance": 0.0
+    },
+    {
+      "file": "Unity-Slime-touch.png",
+      "center": "(0.12, 0.54, -0.01)",
+      "sleeping": false,
+      "rmsSpeed": 0.432011,
+      "physicsCpuMs": 18.4,
+      "volumeSubmitCpuMs": 0.46,
+      "renderWithReadbackMs": 44.17,
+      "particleClearance": 0.0
+    },
+    {
+      "file": "Unity-Slime-splash.png",
+      "center": "(0.12, 0.53, -0.01)",
+      "sleeping": false,
+      "rmsSpeed": 0.149985,
+      "physicsCpuMs": 22.76,
+      "volumeSubmitCpuMs": 0.52,
+      "renderWithReadbackMs": 41.18,
+      "particleClearance": 0.0
+    },
+    {
+      "file": "Unity-Slime-wall.png",
+      "center": "(1.30, 0.75, -0.01)",
+      "sleeping": false,
+      "rmsSpeed": 0.039382,
+      "physicsCpuMs": 19.53,
+      "volumeSubmitCpuMs": 0.74,
+      "renderWithReadbackMs": 43.55,
+      "particleClearance": 0.0
+    },
+    {
+      "file": "Unity-Slime-climb.png",
+      "center": "(3.58, 3.48, 0.00)",
+      "sleeping": false,
+      "rmsSpeed": 2.486106,
+      "physicsCpuMs": 53.06,
+      "volumeSubmitCpuMs": 1.33,
+      "renderWithReadbackMs": 53.79,
+      "particleClearance": 0.0
+    },
+    {
+      "file": "Unity-Slime-door.png",
+      "center": "(0.97, 0.74, -0.01)",
+      "sleeping": false,
+      "rmsSpeed": 1.935892,
+      "physicsCpuMs": 10.85,
+      "volumeSubmitCpuMs": 0.66,
+      "renderWithReadbackMs": 39.44,
+      "particleClearance": 0.0
+    },
+    {
+      "file": "Unity-Slime-door-exit.png",
+      "center": "(11.09, 0.56, 0.00)",
+      "sleeping": false,
+      "rmsSpeed": 1.985643,
+      "physicsCpuMs": 4.8,
+      "volumeSubmitCpuMs": 0.55,
+      "renderWithReadbackMs": 12.22,
+      "particleClearance": 0.0
+    },
+    {
+      "file": "Unity-Slime-window.png",
+      "center": "(0.99, 1.23, 0.00)",
+      "sleeping": false,
+      "rmsSpeed": 1.705436,
+      "physicsCpuMs": 8.34,
+      "volumeSubmitCpuMs": 0.52,
+      "renderWithReadbackMs": 18.02,
+      "particleClearance": 0.0
+    },
+    {
+      "file": "Unity-Slime-window-exit.png",
+      "center": "(9.07, 0.57, 0.00)",
+      "sleeping": false,
+      "rmsSpeed": 2.011418,
+      "physicsCpuMs": 5.48,
+      "volumeSubmitCpuMs": 0.59,
+      "renderWithReadbackMs": 23.92,
+      "particleClearance": 0.0
+    }
+  ],
+  "densityReadback": [
+    {
+      "file": "Unity-Slime-rest.png",
+      "positiveVoxelsInsideSolids": 0
+    },
+    {
+      "file": "Unity-Slime-rest-later.png",
+      "positiveVoxelsInsideSolids": 0
+    },
+    {
+      "file": "Unity-Slime-lift.png",
+      "positiveVoxelsInsideSolids": 0
+    },
+    {
+      "file": "Unity-Slime-release.png",
+      "positiveVoxelsInsideSolids": 0
+    },
+    {
+      "file": "Unity-Slime-touch.png",
+      "positiveVoxelsInsideSolids": 0
+    },
+    {
+      "file": "Unity-Slime-splash.png",
+      "positiveVoxelsInsideSolids": 0
+    },
+    {
+      "file": "Unity-Slime-wall.png",
+      "positiveVoxelsInsideSolids": 0
+    },
+    {
+      "file": "Unity-Slime-climb.png",
+      "positiveVoxelsInsideSolids": 0
+    },
+    {
+      "file": "Unity-Slime-door.png",
+      "positiveVoxelsInsideSolids": 0
+    },
+    {
+      "file": "Unity-Slime-door-exit.png",
+      "positiveVoxelsInsideSolids": 0
+    },
+    {
+      "file": "Unity-Slime-window.png",
+      "positiveVoxelsInsideSolids": 0
+    },
+    {
+      "file": "Unity-Slime-window-exit.png",
+      "positiveVoxelsInsideSolids": 0
+    }
+  ],
+  "secondaryDroplets": [
+    {
+      "file": "Unity-Slime-rest.png",
+      "active": 0,
+      "emitted": 0
+    },
+    {
+      "file": "Unity-Slime-rest-later.png",
+      "active": 0,
+      "emitted": 0
+    },
+    {
+      "file": "Unity-Slime-lift.png",
+      "active": 86,
+      "emitted": 105
+    },
+    {
+      "file": "Unity-Slime-release.png",
+      "active": 0,
+      "emitted": 147
+    },
+    {
+      "file": "Unity-Slime-touch.png",
+      "active": 14,
+      "emitted": 161
+    },
+    {
+      "file": "Unity-Slime-splash.png",
+      "active": 14,
+      "emitted": 161
+    },
+    {
+      "file": "Unity-Slime-wall.png",
+      "active": 0,
+      "emitted": 32
+    },
+    {
+      "file": "Unity-Slime-climb.png",
+      "active": 17,
+      "emitted": 110
+    },
+    {
+      "file": "Unity-Slime-door.png",
+      "active": 33,
+      "emitted": 48
+    },
+    {
+      "file": "Unity-Slime-door-exit.png",
+      "active": 0,
+      "emitted": 251
+    },
+    {
+      "file": "Unity-Slime-window.png",
+      "active": 14,
+      "emitted": 51
+    },
+    {
+      "file": "Unity-Slime-window-exit.png",
+      "active": 0,
+      "emitted": 328
+    }
+  ],
+  "allCapturedVolumesOutsideSolids": true,
+  "performanceNote": "Render timings include synchronous GPU readback; they are not measured interactive frame rates. CPU submission time is not GPU volume execution time.",
+  "coverageNote": "Solid density audit reads GPU voxels at captured instants. Continuous particle paths are checked separately by the solver tests. Native mouse/keyboard interaction was not manually retested in this iteration.",
+  "visualLimitations": [
+    "Simplified street geometry",
+    "Secondary droplets are a visual ballistic layer, not fluid mass",
+    "No complete shower inflow, film breakup or foam system",
+    "Screen-space transmission and cubemap reflection, not full ray tracing",
+    "This report does not certify a one-to-one visual match to the reference"
+  ]
+}

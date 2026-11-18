@@ -1,0 +1,49 @@
+# Unity 自动生成的缓存与本机设置
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# 构建、分析与运行时截图产物
+/[Bb]uild/
+/[Bb]uilds/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+/[Cc]aptures/
+/[Cc]rashReports/
+/sysinfo.txt
+
+# IDE 本地配置与 Unity 自动生成的解决方案
+/.vs/
+/.idea/
+/.vscode/
+*.csproj
+*.unityproj
+*.sln
+*.slnx
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.opendb
+*.VC.db
+*.csproj.meta
+*.unityproj.meta
+*.sln.meta
+*.pidb.meta
+
+# 操作系统与编辑器临时文件
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# 不忽略项目资源、资源 .meta、文档、验收报告与演示视频。

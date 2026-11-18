@@ -1,0 +1,73 @@
+#pragma kernel BuildVolume
+#pragma kernel BlurX
+#pragma kernel BlurY
+#pragma kernel FilterVolume
+#pragma kernel StampWetness
+StructuredBuffer<float4> _Particles;
+StructuredBuffer<float4> _Flow;
+StructuredBuffer<int> _Heads,_Links;
+RWTexture3D<float> _Raw;
+RWTexture3D<float2> _Volume;
+RWTexture2D<float> _Wet;
+float _WetDecay;
+int3 _Dimensions;
+float3 _Minimum,_Size;
+int _SolidCount;
+float4 _SolidCenters[64],_SolidHalves[64];
+float boxDistance(float3 p,float3 center,float3 halfSize){float3 q=abs(p-center)-halfSize;return length(max(q,0))+min(max(q.x,max(q.y,q.z)),0);}
+[numthreads(4,4,4)]
+void BuildVolume(uint3 id:SV_DispatchThreadID)
+{
+    if(any(id>=uint3(_Dimensions)))return;
+    float3 p=_Minimum+float3(id)/(_Dimensions-1)*_Size;int3 cell=int3(floor((p-_Minimum)/.9));float density=0;
+    [loop]for(int z=-1;z<=1;z++)[loop]for(int y=-1;y<=1;y++)[loop]for(int x=-1;x<=1;x++)
+    {
+        int3 c=cell+int3(x,y,z);if(any(c<0)||any(c>=int3(32,20,24)))continue;
+        int index=_Heads[c.x+32*(c.y+20*c.z)];
+        [loop]while(index>=0)
+        {
+            float3 q=_Particles[index].xyz;float contact=_Particles[index].w;
+            float3 d=(p-q)*lerp(float3(1,1,1),float3(.75,2.8,.75),contact);
+            float4 flow=_Flow[index];float3 along=dot(d,flow.xyz)*flow.xyz;
+            // 长轴与横轴保持单位体积变换；最大支撑半径小于邻域单元宽度。
+            d=(d-along)*sqrt(flow.w)+along/flow.w;
+            float w=saturate(1-dot(d,d)/(.55*.55));density+=w*w*w;index=_Links[index];
+        }
+    }
+    _Raw[id]=density;
+}
+[numthreads(4,4,4)]
+void BlurX(uint3 id:SV_DispatchThreadID)
+{
+    if(any(id>=uint3(_Dimensions)))return;int3 q=id,hi=_Dimensions-1;
+    float v=_Raw[id]*.27068;
+    for(int i=1;i<=3;i++){float w=i==1?.21675:i==2?.11128:.03663;v+=(_Raw[clamp(q+int3(i,0,0),0,hi)]+_Raw[clamp(q-int3(i,0,0),0,hi)])*w;}_Volume[id]=v;
+}
+[numthreads(4,4,4)]
+void BlurY(uint3 id:SV_DispatchThreadID)
+{
+    if(any(id>=uint3(_Dimensions)))return;int3 q=id,hi=_Dimensions-1;
+    float v=_Volume[id].x*.27068;
+    for(int i=1;i<=3;i++){float w=i==1?.21675:i==2?.11128:.03663;v+=(_Volume[clamp(q+int3(0,i,0),0,hi)].x+_Volume[clamp(q-int3(0,i,0),0,hi)].x)*w;}_Raw[id]=v;
+}
+[numthreads(4,4,4)]
+void FilterVolume(uint3 id:SV_DispatchThreadID)
+{
+    if(any(id>=uint3(_Dimensions)))return;
+    int3 q=int3(id),hi=_Dimensions-1;float rho=_Raw[id]*.27068;
+    for(int j=1;j<=3;j++){float w=j==1?.21675:j==2?.11128:.03663;rho+=(_Raw[clamp(q+int3(0,0,j),0,hi)]+_Raw[clamp(q-int3(0,0,j),0,hi)])*w;}
+    float3 p=_Minimum+float3(id)/hi*_Size;float clearance=p.y;
+    [loop]for(int i=0;i<_SolidCount;i++)clearance=min(clearance,boxDistance(p,_SolidCenters[i].xyz,_SolidHalves[i].xyz));
+    _Volume[id]=float2(min(rho-.85,clearance*14),rho-.85);
+}
+[numthreads(8,8,1)]
+void StampWetness(uint3 id:SV_DispatchThreadID)
+{
+    if(any(id.xy>=uint2(512,384)))return;
+    float3 p=float3((id.x+.5)/512.0*100-50,.13,(id.y+.5)/384.0*64-32);
+    float3 uv=(p-_Minimum)/_Size;float contact=0;
+    if(all(uv>=0)&&all(uv<=1))contact=saturate(_Volume[int3(uv*(_Dimensions-1))].x*.65);
+    _Wet[id.xy]=max(_Wet[id.xy]*_WetDecay,contact);
+}
+
+
